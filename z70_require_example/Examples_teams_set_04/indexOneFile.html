@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>TypeScript Game</title></head>
+<body>
+<script src="require.js" data-main="mainOneFile.js"></script>
+</body>
+<button class="play" value="play" onclick="play();">play</button>
+
+<script>
+    function play() {
+        require(['Game'], function (Game) {
+            var game = new Game();
+            console.log(game.toString());
+        });
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "teams",
+  "version": "1.0.0",
+  "description": "teams",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "tsc_amd_one": "tsc --module amd --outFile GameCompact.js Game.ts",
+    "tsc_amd": "tsc --module amd Game.ts"
+  },
+  "author": "dani",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^1.8.10"
+  },
+  "devDependencies": {}
+}

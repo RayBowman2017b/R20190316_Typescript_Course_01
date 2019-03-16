@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <title>RequireJS Example</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <style type="text/css">
+	.panel-default > .panel-heading {
+		background-color: linen;
+	}
+  </style>
+</head>
+<body>
+  <div class="panel panel-default">
+    <div class="panel-heading">Test Form</div>
+    <div class="panel-body">
+      <input type="text" class="form-control" placeholder="First name" data-bind="value: firstName, valueUpdate: 'keyup'" />
+      <input type="text" class="form-control" placeholder="Last name" data-bind="value: lastName, valueUpdate: 'keyup'" />
+    </div>
+    <h3><span title="Click to edit" class="label label-success">Hello, <span id="name" data-bind="text: fullName"></span>!</span></h3>
+  </div>
+  <script type="text/javascript">
+	var ViewModel = function(first, last) {
+		var self = this;
+		self.firstName = ko.observable(first);
+		self.lastName = ko.observable(last);
+		self.fullName = ko.computed(function() {
+			return self.firstName() + ' ' + self.lastName();
+		});
+	};
+	
+	$(document).ready(function() {
+		ko.applyBindings(new ViewModel("John", "Smith"));
+	})
+  </script>
+</body>
+</html>

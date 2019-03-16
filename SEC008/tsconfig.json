@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "amd",
+        "outFile": "app.js",
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "noEmitOnError": true,
+        "noUnusedParameters": false
+    },
+    "include": [ "app.ts", "a08_circle_math.ts", "a08_rectangle_math.ts" ],
+    "exclude": [
+        "node_modules"
+    ]
+}

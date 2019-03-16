@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "amd",
+        "outFile": "play02.js",
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "noEmitOnError": true,
+        "noUnusedParameters": false
+    },
+    "include": [ "play02.ts"],
+    "exclude": [
+        "node_modules"
+    ]
+}
